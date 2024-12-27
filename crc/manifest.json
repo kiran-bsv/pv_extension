@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Town and Sea URL Modifier by Kiran bsv",
+    "version": "1.0",
+    "description": "Replaces the AJAX URL on the Town and Sea website.",
+    "permissions": [
+    "declarativeNetRequest",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://townandsea.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://townandsea.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+  
